@@ -12,5 +12,6 @@
   "reporterOptions": {
     "configFile": "reporter-config.json"
   },
+  "videoUploadOnPasses": false,
   "videoCompression": 15
 }

@@ -20,7 +20,7 @@ jobs:
           $(npm bin)/cypress verify
 
       - name: Run Cypress tests
-        run: npm run cy:run-chrome
+        run: npm run cy:run
         continue-on-error: true
 
       - name: Copy test execution videos

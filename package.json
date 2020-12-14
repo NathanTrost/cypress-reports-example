@@ -19,7 +19,6 @@
   "scripts": {
     "cy:open": "yarn cypress open",
     "cy:run": "yarn cypress run",
-    "cy:run-chrome": "yarn cypress run --browser chrome",
     "report:merge": "mochawesome-merge cypress/results/json/*.json > index.json",
     "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
   },
