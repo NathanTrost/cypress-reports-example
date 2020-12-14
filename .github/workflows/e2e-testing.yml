@@ -26,14 +26,14 @@ jobs:
 
       - name: Copy test execution videos
         run: |
-          mkdir public
-          cp -r cypress/videos public/videos
+          mkdir reports
+          cp -r cypress/videos /reports/videos
 
       - name: Merge test results into one
-        run: npm run report:merge
+        run: npm run reports:merge
 
       - name: Generate HTML report
-        run: npm run report:generate
+        run: npm run reports:generate
 
       - name: Deploy report page
         uses: peaceiris/actions-gh-pages@v3

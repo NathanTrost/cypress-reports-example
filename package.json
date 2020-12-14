@@ -22,8 +22,8 @@
   "scripts": {
     "cy:open": "yarn cypress open",
     "cy:run": "yarn cypress run",
-    "report:merge": "mochawesome-merge cypress/results/json/*.json > index.json",
-    "report:generate": "merge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
+    "reports:merge": "mochawesome-merge cypress/results/json/*.json > reports/index.json",
+    "reports:generate": "marge reports/index.json --reportDir reports --assetsDir reports/assets --reportPageTitle index.html"
   },
   "license": "ISC"
 }
