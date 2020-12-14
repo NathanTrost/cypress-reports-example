@@ -1,5 +1,6 @@
 {
   "name": "cypress-reports-example",
+  "author": "Nathan Trost",
   "version": "1.0.0",
   "description": "Setting up initial example for how to use cypress reports with Github Actions",
   "main": "index.js",
