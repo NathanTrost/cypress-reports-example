@@ -1,8 +1,8 @@
 node_modules
 
-githubpages/public/*
-githubpages/assets/*
-githubpages/index.json
+docs/public/*
+docs/assets/*
+docs/index.json
 
 cypress/results/*
 cypress/screenshots/*
