@@ -1,5 +1,9 @@
 node_modules
-reports/*
+
+githubpages/public/*
+githubpages/assets/*
+githubpages/index.json
+
 cypress/results/*
 cypress/screenshots/*
 cypress/videos/*
