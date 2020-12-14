@@ -14,7 +14,7 @@ jobs:
 
       - name: Install a project with a clean slate
         run: |
-          npm ci
+          yarn install --frozen-lockfile
           $(npm bin)/cypress cache path
           $(npm bin)/cypress cache list
           $(npm bin)/cypress verify
