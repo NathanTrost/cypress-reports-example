@@ -1,6 +1,6 @@
 name: Create Cypress report
 on: pull_request
-  branches: staging
+  branches: main
 
 jobs:
   cypress-e2e-chrome81:
