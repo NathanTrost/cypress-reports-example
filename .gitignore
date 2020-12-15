@@ -1,8 +1,7 @@
 node_modules
 
-docs/public/*
-docs/assets/*
-docs/index.json
+public/*
+!public/README.md
 
 cypress/results/*
 cypress/screenshots/*
