@@ -22,6 +22,7 @@
   "scripts": {
     "cy:open": "yarn cypress open",
     "cy:run": "yarn cypress run",
+    "copy:videos": "cp -r cypress/videos /public/videos",
     "reports:merge": "mochawesome-merge cypress/results/json/*.json -o public/mochawesome.json",
     "reports:generate": "marge public/mochawesome.json --reportDir public --assetsDir public/assets --f index.html"
   },
