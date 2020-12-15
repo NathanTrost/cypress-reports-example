@@ -24,9 +24,7 @@ jobs:
         continue-on-error: true
 
       - name: Copy test execution videos
-        run: |
-          mkdir reports
-          cp -r cypress/videos /reports/videos
+        run: cp -r cypress/videos /public/videos
 
       - name: Merge test results into one
         run: npm run reports:merge
