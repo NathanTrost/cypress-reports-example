@@ -1,0 +1,226 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-12-17T18:34:56.211Z",
+    "end": "2020-12-17T18:35:18.867Z",
+    "duration": 13695,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "251ed2ab-8657-4c6c-ba34-f97dcab78601",
+      "title": "",
+      "fullFile": "cypress/integration/searchFailure.spec.js",
+      "file": "cypress/integration/searchFailure.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "74530231-1462-4c87-8d30-f514175c760a",
+          "title": "Google fail search",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfully loads Google.com",
+              "fullTitle": "Google fail search Successfully loads Google.com",
+              "timedOut": null,
+              "duration": 5320,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/searchFailure.spec.js.mp4\"",
+              "code": "cy.visit(\"https://www.google.com\");",
+              "err": {},
+              "uuid": "cb6db571-f434-45b0-a6c7-7996e8fd3054",
+              "parentUUID": "74530231-1462-4c87-8d30-f514175c760a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search for something strange",
+              "fullTitle": "Google fail search Search for something strange",
+              "timedOut": null,
+              "duration": 1293,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/searchFailure.spec.js.mp4\"",
+              "code": "cy.get('[name=\"q\"]').type(\"anqqaxc a57k2..\").should(\"have.value\", \"anqqaxc a57k2..\").type(\"{enter}\");",
+              "err": {},
+              "uuid": "f73ed668-12f8-4d39-9613-747c51256666",
+              "parentUUID": "74530231-1462-4c87-8d30-f514175c760a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Expect more than 1000 results",
+              "fullTitle": "Google fail search Expect more than 1000 results",
+              "timedOut": null,
+              "duration": 4188,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"videos/searchFailure.spec.js.mp4\"",
+              "code": "cy.get('[id=\"result-stats\"]').contains(\"100 results\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: '100 results' within the element: <div#result-stats> but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: '100 results' within the element: <div#result-stats> but never did.\nAssertionError: Expected to find element: `:not(script,style):cy-contains('100 results'), [type='submit'][value~='100 results']`, but never found it.\n    at ensureExistence (https://www.google.com/__cypress/runner/cypress_runner.js:137438:32)\n    at Object.ensureElExistence (https://www.google.com/__cypress/runner/cypress_runner.js:137456:12)\n    at ensureExistence (https://www.google.com/__cypress/runner/cypress_runner.js:127861:23)\n    at onFailFn (https://www.google.com/__cypress/runner/cypress_runner.js:127899:9)\n    at tryCatcher (https://www.google.com/__cypress/runner/cypress_runner.js:9059:23)\n    at Promise._settlePromiseFromHandler (https://www.google.com/__cypress/runner/cypress_runner.js:6994:31)\n    at Promise._settlePromise (https://www.google.com/__cypress/runner/cypress_runner.js:7051:18)\n    at Promise._settlePromise0 (https://www.google.com/__cypress/runner/cypress_runner.js:7096:10)\n    at Promise._settlePromises (https://www.google.com/__cypress/runner/cypress_runner.js:7172:18)\n    at _drainQueueStep (https://www.google.com/__cypress/runner/cypress_runner.js:3766:12)\n    at _drainQueue (https://www.google.com/__cypress/runner/cypress_runner.js:3759:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.google.com/__cypress/runner/cypress_runner.js:3775:5)\n    at Async.drainQueues (https://www.google.com/__cypress/runner/cypress_runner.js:3645:14)",
+                "diff": null
+              },
+              "uuid": "89406a86-a5aa-47ab-a6c8-b7c1b3c03011",
+              "parentUUID": "74530231-1462-4c87-8d30-f514175c760a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cb6db571-f434-45b0-a6c7-7996e8fd3054",
+            "f73ed668-12f8-4d39-9613-747c51256666"
+          ],
+          "failures": [
+            "89406a86-a5aa-47ab-a6c8-b7c1b3c03011"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10801,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "c306ced7-d50b-4218-b86b-743e56d601a2",
+      "title": "",
+      "fullFile": "cypress/integration/searchSucces.spec.js",
+      "file": "cypress/integration/searchSucces.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cfa38f63-ed82-4e34-b8dc-da5f184b6b82",
+          "title": "Google success search",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfully loads Google.com",
+              "fullTitle": "Google success search Successfully loads Google.com",
+              "timedOut": null,
+              "duration": 839,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/searchSucces.spec.js.mp4\"",
+              "code": "cy.visit(\"https://www.google.com\");",
+              "err": {},
+              "uuid": "b8f4e19a-c004-403d-beec-2d074a728c0f",
+              "parentUUID": "cfa38f63-ed82-4e34-b8dc-da5f184b6b82",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search for a video",
+              "fullTitle": "Google success search Search for a video",
+              "timedOut": null,
+              "duration": 2055,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/searchSucces.spec.js.mp4\"",
+              "code": "cy.get('[name=\"q\"]').type(\"never gonna give you up youtube\").should(\"have.value\", \"never gonna give you up youtube\").type(\"{enter}\");",
+              "err": {},
+              "uuid": "3059b8d2-5232-42d0-9892-baadb963b3e7",
+              "parentUUID": "cfa38f63-ed82-4e34-b8dc-da5f184b6b82",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b8f4e19a-c004-403d-beec-2d074a728c0f",
+            "3059b8d2-5232-42d0-9892-baadb963b3e7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2894,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
