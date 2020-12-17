@@ -24,32 +24,33 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-import '@testing-library/cypress/add-commands';
+import "@percy/cypress";
+import "@testing-library/cypress/add-commands";
 
 function unquote(str) {
-  return str.replace(/(^")|("$)/g, '');
+  return str.replace(/(^")|("$)/g, "");
 }
 
 Cypress.Commands.add(
-  'before',
+  "before",
   {
-    prevSubject: 'element',
+    prevSubject: "element",
   },
   (el, property) => {
     const win = el[0].ownerDocument.defaultView;
-    const pseudo = win.getComputedStyle(el[0], 'before');
+    const pseudo = win.getComputedStyle(el[0], "before");
     return unquote(pseudo.getPropertyValue(property));
   }
 );
 
 Cypress.Commands.add(
-  'after',
+  "after",
   {
-    prevSubject: 'element',
+    prevSubject: "element",
   },
   (el, property) => {
     const win = el[0].ownerDocument.defaultView;
-    const pseudo = win.getComputedStyle(el[0], 'after');
+    const pseudo = win.getComputedStyle(el[0], "after");
     return unquote(pseudo.getPropertyValue(property));
   }
 );
