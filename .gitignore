@@ -5,4 +5,4 @@ public/*
 
 cypress/results/*
 cypress/screenshots/*
-cypress/videos/*
+cypress/videos/* 
