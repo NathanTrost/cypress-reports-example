@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 describe("Google success search", () => {
   it("Successfully loads Google.com", () => {
     cy.visit("https://www.google.com");
@@ -8,5 +10,9 @@ describe("Google success search", () => {
       .type("never gonna give you up youtube")
       .should("have.value", "never gonna give you up youtube")
       .type("{enter}");
+  });
+
+  it("Takes a snapshot", () => {
+    cy.percySnapshot();
   });
 });

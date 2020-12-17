@@ -18,9 +18,10 @@
  * @param config - The resolved Cypress config
  */
 
+let percyHealthCheck = require("@percy/cypress/task");
+
 module.exports = (on, config) => {
-  // require('@cypress/code-coverage/task')(on, config);
-  // IMPORTANT to return the config object
-  // with the any changed environment variables
-  return config;
+  // `on` is used to hook into various events Cypress emits
+  // `config` is the resolved Cypress config
+  on("task", percyHealthCheck);
 };
