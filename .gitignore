@@ -1,1 +1,8 @@
 node_modules
+
+public/*
+!public/README.md
+
+cypress/results/*
+cypress/screenshots/*
+cypress/videos/* 

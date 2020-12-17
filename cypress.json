@@ -1,6 +1,4 @@
 {
-  "baseUrl": "http://localhost:3000/",
-  "video": false,
   "testFiles": "**/*.spec.js",
   "screenshotsFolder": "./cypress/screenshots",
   "integrationFolder": "./cypress/integration",
@@ -8,5 +6,12 @@
   "supportFile": "./cypress/support",
   "videosFolder": "./cypress/videos",
   "fixturesFolder": "./cypress/fixtures",
-  "experimentalComponentTesting": true
+  "video": true,
+  "experimentalComponentTesting": true,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  },
+  "videoUploadOnPasses": false,
+  "videoCompression": 15
 }
