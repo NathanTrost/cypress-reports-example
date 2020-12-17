@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 describe("Google fail search", () => {
   it("Successfully loads Google.com", () => {
     cy.visit("https://www.google.com");
@@ -12,5 +14,9 @@ describe("Google fail search", () => {
 
   it("Expect more than 1000 results", () => {
     cy.get('[id="result-stats"]').contains("100 results");
+  });
+
+  it("Takes a snapshot", () => {
+    cy.percySnapshot();
   });
 });
