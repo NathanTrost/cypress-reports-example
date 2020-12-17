@@ -26,7 +26,7 @@
     "copy:videos": "cp -r cypress/videos /public/videos",
     "reports:merge": "mochawesome-merge cypress/results/json/*.json -o public/mochawesome.json",
     "reports:generate": "marge public/mochawesome.json --reportDir public --assetsDir public/assets --f index.html",
-    "test": "percy exec -- node \"cypress/visualTesting/*/*.spec.js\""
+    "cy:percy": "percy exec -- cypress run --spec \"cypress/visualTesting/*/*.spec.js\""
   },
   "license": "ISC"
 }

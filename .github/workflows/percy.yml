@@ -11,6 +11,6 @@ jobs:
       - name: Percy Test
         uses: percy/exec-action@v0.1.1
         with:
-          command: "cypress run"
+          command: "cy:percy"
         env:
           PERCY_TOKEN: aaf4b85a12f08904981a24f851153ad091d1f590abd429c34a9b301682f4d16d
